@@ -1,40 +1,7 @@
 import { Settings } from "types/settings";
-import { replaceTemplate } from "./util";
-import { timetableData, emptyBlock, classType } from "types/classes";
-import {
-  defaultSettings,
-  groupOpts,
-  root,
-  subjectMappings,
-  subjectMappingsDrut,
-} from "globals/consts";
-enum weekday {
-  sunday = 0,
-  monday = 1,
-  tuesday = 2,
-  wednesday = 3,
-  thursday = 4,
-  friday = 5,
-  saturday = 6,
-}
-function getWeek(date: Date) {
-  var date = new Date(date.getTime());
-  date.setHours(0, 0, 0, 0);
-  // Thursday in current week decides the year.
-  date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
-  // January 4 is always in week 1.
-  var week1 = new Date(date.getFullYear(), 0, 4);
-  // Adjust to Thursday in week 1 and count number of weeks from date to week1.
-  return (
-    1 +
-    Math.round(
-      ((date.getTime() - week1.getTime()) / 86400000 -
-        3 +
-        ((week1.getDay() + 6) % 7)) /
-        7
-    )
-  );
-}
+import { getNextWeekday, getWeekNumber, replaceTemplate } from "./util";
+import { timetableData, emptyBlock, weekday } from "types/classes";
+import { defaultSettings, root, subjectMappingsDrut } from "globals/consts";
 
 const timetableDiv = document.getElementById("timetable");
 
@@ -47,18 +14,8 @@ const dayTemplate = await fetch(root + "templates/day.html").then((res) =>
 const classTemplate = await fetch(root + "templates/class.html").then((res) =>
   res.text()
 );
-let settings: Settings =
-  document.cookie === "" ? defaultSettings : JSON.parse(document.cookie);
-document.cookie = JSON.stringify(settings);
 
 // day from 0 to 6, as per Date implementation
-function getNextWeekday(day: weekday): Date {
-  let today = new Date();
-  while (today.getDay() !== day) {
-    today.setDate(today.getDate() + 1);
-  }
-  return today;
-}
 function isPeimThisWeek(hour: string): boolean {
   // filter out additional slot
   if (hour.startsWith("1")) return false;
@@ -66,78 +23,17 @@ function isPeimThisWeek(hour: string): boolean {
   const nextLab = getNextWeekday(weekday.monday);
   const group = localStorage.getItem("peim_lab") as string;
   return (
-    (getWeek(nextLab) % 2 === 0 && group === "A") ||
-    (getWeek(nextLab) % 2 === 1 && group === "B")
+    (getWeekNumber(nextLab) % 2 === 0 && group === "A") ||
+    (getWeekNumber(nextLab) % 2 === 1 && group === "B")
   );
 }
 function isAisdThisWeek(): boolean {
   const nextLab = getNextWeekday(weekday.wednesday);
   const group = localStorage.getItem("aids_lab") as string;
   return (
-    (getWeek(nextLab) % 2 === 0 && group === "nieparzyste") ||
-    (getWeek(nextLab) % 2 === 1 && group === "parzyste")
+    (getWeekNumber(nextLab) % 2 === 0 && group === "nieparzyste") ||
+    (getWeekNumber(nextLab) % 2 === 1 && group === "parzyste")
   );
-}
-function matchesAidsProj(day: string, hour: string): boolean {
-  let group = localStorage.getItem("aids_proj");
-  switch (day) {
-    case "monday":
-      if (group === "poniedziałek rano" && hour[0] === "0") return true;
-      if (group === "poniedziałek rano" && hour[1] === "1") return true;
-    case "wednesday":
-      return group === "środa";
-    case "friday":
-      return group === "piątek";
-    default:
-      return false;
-  }
-}
-function matchesUCProj(day: string, hour: string): boolean {
-  let group = localStorage.getItem("uc_proj");
-  switch (day) {
-    case "monday":
-      return group === "poniedziałek";
-    case "tuesday":
-      return group === "wtorek" && parseInt(hour[1]) < 8;
-    case "wednesday":
-      return group === "środa";
-    default:
-      return false;
-  }
-}
-function matchesUCLab(day: string): boolean {
-  let group = localStorage.getItem("uc_lab");
-  switch (day) {
-    case "tuesday":
-      return group === "wtorek";
-    case "friday":
-      return group === "piątek";
-    default:
-      return false;
-  }
-}
-
-function matchesSO(day: string): boolean {
-  let group = localStorage.getItem("so_lab");
-  switch (day) {
-    case "tuesday":
-      return group === "wtorek";
-    case "wednesday":
-      return group === "środa";
-    default:
-      return false;
-  }
-}
-function matchesOOP(day: string): boolean {
-  let group = localStorage.getItem("oop_lab");
-  switch (day) {
-    case "tuesday":
-      return group === "wtorek";
-    case "wednesday":
-      return group === "środa";
-    default:
-      return false;
-  }
 }
 
 function getKeyByValue(map: Map<string, string>, searchValue: any) {
@@ -172,12 +68,10 @@ if (timetableDiv !== null) {
         start_date: null,
         end_date: null,
       };
-      // console.log(classes);
       for (const classBlock of classes.items) {
         // Ensure date exists; if not specified, classes last the entire semester.
         // Dates chosen within reasonable boundaries.
 
-        // console.log(classBlock.start_date, classBlock.end_date);
         if (classBlock.end_date !== null) {
           classBlock.end_date = new Date(classBlock.end_date);
         } else {
@@ -190,18 +84,15 @@ if (timetableDiv !== null) {
         }
         let today = new Date();
         // Check if classes start within bounds
-        // console.log(classBlock.start_date, classBlock.end_date, today);
         if (
           (classBlock.start_date > today || classBlock.end_date < today) &&
           localStorage.getItem("display-all") !== "true"
         )
-          continue; //
+          continue;
+
         let key = getKeyByValue(
           subjectMappingsDrut,
           classBlock.subject_type + classBlock.subject_name
-        );
-        console.log(
-          getKeyByValue(subjectMappingsDrut, "[P]Algorytmy i struktury danych")
         );
         switch (key) {
           case "aids_proj":
@@ -238,19 +129,76 @@ if (timetableDiv !== null) {
     }
     while (output[0].room === "") output.shift();
     while (output[output.length - 1].room === "") output.pop();
-    let prevTime;
     for (const classes of output) {
-      // if (classes === "") {
       scheduleDiv.innerHTML += replaceTemplate(
         classes.hour,
         classTemplate,
         classes
-        // emptyBlock
       );
-      // continue;
-      // }
     }
-    // console.log(output);
   }
 }
 export {};
+
+// Util functions necessary to map subject groups to days
+function matchesAidsProj(day: string, hour: string): boolean {
+  const group = localStorage.getItem("aids_proj");
+  switch (day) {
+    case "monday":
+      if (group === "poniedziałek rano" && hour[0] === "0") return true;
+      if (group === "poniedziałek po południu" && hour[1] === "1") return true;
+    case "wednesday":
+      return group === "środa";
+    case "friday":
+      return group === "piątek";
+    default:
+      return false;
+  }
+}
+function matchesUCProj(day: string, hour: string): boolean {
+  const group = localStorage.getItem("uc_proj");
+  switch (day) {
+    case "monday":
+      return group === "poniedziałek";
+    case "tuesday":
+      return group === "wtorek" && parseInt(hour[1]) < 8;
+    case "wednesday":
+      return group === "środa";
+    default:
+      return false;
+  }
+}
+function matchesUCLab(day: string): boolean {
+  const group = localStorage.getItem("uc_lab");
+  switch (day) {
+    case "tuesday":
+      return group === "wtorek";
+    case "friday":
+      return group === "piątek";
+    default:
+      return false;
+  }
+}
+
+function matchesSO(day: string): boolean {
+  const group = localStorage.getItem("so_lab");
+  switch (day) {
+    case "tuesday":
+      return group === "wtorek";
+    case "wednesday":
+      return group === "środa";
+    default:
+      return false;
+  }
+}
+function matchesOOP(day: string): boolean {
+  const group = localStorage.getItem("oop_lab");
+  switch (day) {
+    case "tuesday":
+      return group === "wtorek";
+    case "wednesday":
+      return group === "środa";
+    default:
+      return false;
+  }
+}
