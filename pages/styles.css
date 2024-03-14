@@ -1,0 +1,107 @@
+/* Resetting some default browser styles */
+body, html {
+  all: unset; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+  text-justify:inter-word;
+  margin-bottom: 1.5rem;
+}
+
+/* Basic styles for the settings container */
+#settings-wrapper {
+    padding: 3rem 5rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 20px ;
+}
+
+/* Styles for the checkboxes and labels */
+
+label {
+    font-weight: bold;
+}
+#checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.checkbox-container  div {
+  width:min-content;
+}
+/* Styles for the settings sections */
+.settings-section {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.settings-section label {
+    margin-right: 10px;
+}
+
+.settings-section > div > button {
+  border: none;
+}
+
+.settings-section > div {
+    margin-top: 10px;
+  margin-right: -20px;
+  display: flex;
+}
+.settings-section input[type="text"] {
+    /* width: 80px; */
+    border: none;
+    text-align: center;
+}
+#settings-container   {
+  display: flex;
+  flex-direction: column;
+}
+#settings-container > a {
+  all:unset;
+  text-decoration: underline;
+  align-self: center;
+}
+
+/* Styling for previous and next buttons */
+.prevGroup,
+.nextGroup {
+    background-color: white;
+    /* color: white; */
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
+.settings-input{
+  min-width: fit-content;
+}
+
+/* Styling for the title */
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 616px) {
+ .settings-section{
+  flex-direction: column;
+ } 
+}

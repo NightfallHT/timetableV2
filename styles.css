@@ -1,0 +1,106 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  /* width: 300px; */
+  text-align: center;
+  /* overflow: hidden; */
+}
+#timetable::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#timetable {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+#timetable {
+  display: flex;
+  /* flex-direction: column; */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100vw; 
+  /* min-width: fit-content; */
+  
+  
+  
+  
+  scroll-behavior:smooth ;
+  -webkit-overflow-scrolling: touch;
+  
+  /*
+  scroll-snap-points-x: repeat(300px);
+  */
+  scroll-snap-type:mandatory ;
+}
+#timetable::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#timetable::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+#timetable::-webkit-scrollbar-track {
+  background: transparent;
+}
+#timetable > div {
+  scroll-snap-align:center;
+  overflow-y: scroll ;
+  flex-shrink: 0;
+  flex-grow: 1;
+  /* margin: 0 50%; */
+  width: 100%;
+  max-width: 100vw;
+  /* height: 100%; */
+  /* margin-right: 50px; */
+  /* border-radius: 10px;
+  background: #eee; */
+  transform-origin:center center;
+  /* position: relative; */
+  
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* font-size: 10px; */
+}
+
+
+
+html, body {
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items:center;
+  padding: 0 1em;
+  gap: 2em;
+  justify-content: space-between;
+}
+.data-container *{
+/* display: inline-block; */
+  /* word-wrap: ; */
+}
+.time{
+  display: block;
+  width: auto;
+  /* height: 100%; */
+  text-align: center;
+  text-justify:auto;
+}
+#title{
+  text-justify:inter-word;
+}

@@ -1,0 +1,1001 @@
+{
+  "monday": [
+    {
+      "hour": "07:00",
+      "items": [
+        {
+          "hour": "07:00",
+          "room": "NE 159",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": "od 29.04.2024",
+          "start_date": "2024.04.29",
+          "end_date": null
+        },
+        {
+          "hour": "07:00",
+          "room": "EA 222",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Maciej Wróbel",
+          "notes": "do 22.04.2024 co 2 tygodnie (7:15 - 9:30)",
+          "start_date": null,
+          "end_date": "2024.04.22"
+        }
+      ]
+    },
+    {
+      "hour": "08:00",
+      "items": [
+        {
+          "hour": "08:00",
+          "room": "NE 159",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": "od 29.04.2024",
+          "start_date": "2024.04.29",
+          "end_date": null
+        },
+        {
+          "hour": "08:00",
+          "room": "EA 222",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Maciej Wróbel",
+          "notes": "do 22.04.2024 co 2 tygodnie (7:15 - 9:30)",
+          "start_date": null,
+          "end_date": "2024.04.22"
+        }
+      ]
+    },
+    {
+      "hour": "09:00",
+      "items": [
+        {
+          "hour": "09:00",
+          "room": "AUD.MAX.",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy fizyki",
+          "teacher": "dr inż. Patrycja Stefańska-Ptaszek",
+          "notes": "9:35 - 11:05",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "10:00",
+      "items": [
+        {
+          "hour": "10:00",
+          "room": "AUD.MAX.",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy fizyki",
+          "teacher": "dr inż. Patrycja Stefańska-Ptaszek",
+          "notes": "9:35 - 11:05",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "11:00",
+      "items": []
+    },
+    {
+      "hour": "12:00",
+      "items": [
+        {
+          "hour": "12:00",
+          "room": "NE 233",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Janusz Kozłowski",
+          "notes": "do 22.04.2024; termin wspólny gr.9",
+          "start_date": null,
+          "end_date": "2024.04.22"
+        }
+      ]
+    },
+    {
+      "hour": "13:00",
+      "items": [
+        {
+          "hour": "13:00",
+          "room": "NE 233",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Janusz Kozłowski",
+          "notes": "do 22.04.2024; termin wspólny gr.9",
+          "start_date": null,
+          "end_date": "2024.04.22"
+        }
+      ]
+    },
+    {
+      "hour": "14:00",
+      "items": [
+        {
+          "hour": "14:00",
+          "room": "EA 508",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Andrzej Jastrzębski",
+          "notes": "od 29.04.2024; termin wspólny gr.10",
+          "start_date": "2024.04.29",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "15:00",
+      "items": [
+        {
+          "hour": "15:00",
+          "room": "EA 508",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Andrzej Jastrzębski",
+          "notes": "od 29.04.2024; termin wspólny gr.10",
+          "start_date": "2024.04.29",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "16:00",
+      "items": [
+        {
+          "hour": "16:00",
+          "room": "EA 222",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Michał Rycewicz",
+          "notes": "co 2 tygodnie; termin dodatkowy",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "17:00",
+      "items": [
+        {
+          "hour": "17:00",
+          "room": "EA 222",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Michał Rycewicz",
+          "notes": "co 2 tygodnie; termin dodatkowy",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "18:00",
+      "items": [
+        {
+          "hour": "18:00",
+          "room": "EA 222",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Michał Rycewicz",
+          "notes": "co 2 tygodnie; termin dodatkowy",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "19:00",
+      "items": []
+    },
+    {
+      "hour": "20:00",
+      "items": []
+    },
+    {
+      "hour": "21:00",
+      "items": []
+    }
+  ],
+  "tuesday": [
+    {
+      "hour": "07:00",
+      "items": []
+    },
+    {
+      "hour": "08:00",
+      "items": []
+    },
+    {
+      "hour": "09:00",
+      "items": [
+        {
+          "hour": "09:00",
+          "room": "EA 436",
+          "subject_type": "[L]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Adam Kaczmarek",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "10:00",
+      "items": [
+        {
+          "hour": "10:00",
+          "room": "EA 436",
+          "subject_type": "[L]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Adam Kaczmarek",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "11:00",
+      "items": [
+        {
+          "hour": "11:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Michał Wróbel",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "12:00",
+      "items": [
+        {
+          "hour": "12:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Michał Wróbel",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "13:00",
+      "items": [
+        {
+          "hour": "13:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "dr inż. Krzysztof Manuszewski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "14:00",
+      "items": [
+        {
+          "hour": "14:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "dr inż. Krzysztof Manuszewski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "15:00",
+      "items": [
+        {
+          "hour": "15:00",
+          "room": "NE 230",
+          "subject_type": "[C]",
+          "subject_name": "Podstawy fizyki",
+          "teacher": "dr hab. Maciej Demianowicz",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "16:00",
+      "items": [
+        {
+          "hour": "16:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "od 30.04.2024",
+          "start_date": "2024.04.30",
+          "end_date": null
+        },
+        {
+          "hour": "16:00",
+          "room": "NE 110",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "do 23.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        }
+      ]
+    },
+    {
+      "hour": "17:00",
+      "items": [
+        {
+          "hour": "17:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "od 30.04.2024",
+          "start_date": "2024.04.30",
+          "end_date": null
+        },
+        {
+          "hour": "17:00",
+          "room": "NE 110",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "do 23.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        }
+      ]
+    },
+    {
+      "hour": "18:00",
+      "items": [
+        {
+          "hour": "18:00",
+          "room": "NE 110",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "do 23.04.2024; termin wspólny gr.8",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        },
+        {
+          "hour": "18:00",
+          "room": "NE 159",
+          "subject_type": "[L]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr inż. Andrzej Chybicki",
+          "notes": "do 23.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        }
+      ]
+    },
+    {
+      "hour": "19:00",
+      "items": [
+        {
+          "hour": "19:00",
+          "room": "NE 110",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Kamil Stawiarski",
+          "notes": "do 23.04.2024; termin wspólny gr.8",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        },
+        {
+          "hour": "19:00",
+          "room": "NE 159",
+          "subject_type": "[L]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr inż. Andrzej Chybicki",
+          "notes": "do 23.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.23"
+        }
+      ]
+    },
+    {
+      "hour": "20:00",
+      "items": []
+    },
+    {
+      "hour": "21:00",
+      "items": []
+    }
+  ],
+  "wednesday": [
+    {
+      "hour": "07:00",
+      "items": [
+        {
+          "hour": "07:00",
+          "room": "NE 239",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": "od 24.04.2024; termin wspólny gr.9",
+          "start_date": "2024.04.24",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "08:00",
+      "items": [
+        {
+          "hour": "08:00",
+          "room": "NE 239",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": "od 24.04.2024; termin wspólny gr.9",
+          "start_date": "2024.04.24",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "09:00",
+      "items": [
+        {
+          "hour": "09:00",
+          "room": "NE 209",
+          "subject_type": "[C]",
+          "subject_name": "Matematyka dyskretna",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "10:00",
+      "items": [
+        {
+          "hour": "10:00",
+          "room": "NE 209",
+          "subject_type": "[C]",
+          "subject_name": "Matematyka dyskretna",
+          "teacher": "mgr inż. Robert Ostrowski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "11:00",
+      "items": [
+        {
+          "hour": "11:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Piotr Łyczko",
+          "notes": "od 24.04.2024",
+          "start_date": "2024.04.24",
+          "end_date": null
+        },
+        {
+          "hour": "11:00",
+          "room": "SPNJO I2",
+          "subject_type": "[C]",
+          "subject_name": "Język angielski I",
+          "teacher": "mgr Agnieszka Jachowicz",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "12:00",
+      "items": [
+        {
+          "hour": "12:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Piotr Łyczko",
+          "notes": "od 24.04.2024",
+          "start_date": "2024.04.24",
+          "end_date": null
+        },
+        {
+          "hour": "12:00",
+          "room": "SPNJO I2",
+          "subject_type": "[C]",
+          "subject_name": "Język angielski I",
+          "teacher": "mgr Agnieszka Jachowicz",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "13:00",
+      "items": [
+        {
+          "hour": "13:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Janusz Kozłowski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "14:00",
+      "items": [
+        {
+          "hour": "14:00",
+          "room": "NE 233",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Krzysztof Cisowski",
+          "notes": "do 17.04.2024; termin wspólny gr.10",
+          "start_date": null,
+          "end_date": "2024.04.17"
+        },
+        {
+          "hour": "14:00",
+          "room": "NE 160",
+          "subject_type": "[L]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr hab. Marcin Ciecholewski",
+          "notes": "do 17.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.17"
+        },
+        {
+          "hour": "14:00",
+          "room": "EA 436",
+          "subject_type": "[L]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Piotr Rajchowski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "15:00",
+      "items": [
+        {
+          "hour": "15:00",
+          "room": "NE 233",
+          "subject_type": "[P]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "dr inż. Krzysztof Cisowski",
+          "notes": "do 17.04.2024; termin wspólny gr.10",
+          "start_date": null,
+          "end_date": "2024.04.17"
+        },
+        {
+          "hour": "15:00",
+          "room": "NE 160",
+          "subject_type": "[L]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr hab. Marcin Ciecholewski",
+          "notes": "do 17.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.17"
+        },
+        {
+          "hour": "15:00",
+          "room": "EA 436",
+          "subject_type": "[L]",
+          "subject_name": "Systemy operacyjne",
+          "teacher": "dr inż. Piotr Rajchowski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "16:00",
+      "items": [
+        {
+          "hour": "16:00",
+          "room": "EA 507",
+          "subject_type": "[L]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "dr Marcin Jurkiewicz",
+          "notes": "co 2 tygodnie",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "17:00",
+      "items": [
+        {
+          "hour": "17:00",
+          "room": "EA 507",
+          "subject_type": "[L]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "dr Marcin Jurkiewicz",
+          "notes": "co 2 tygodnie",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "18:00",
+      "items": [
+        {
+          "hour": "18:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Piotr Łyczko",
+          "notes": "od 24.04.2024",
+          "start_date": "2024.04.24",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "19:00",
+      "items": [
+        {
+          "hour": "19:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Piotr Łyczko",
+          "notes": "od 24.04.2024",
+          "start_date": "2024.04.24",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "20:00",
+      "items": []
+    },
+    {
+      "hour": "21:00",
+      "items": []
+    }
+  ],
+  "thursday": [
+    {
+      "hour": "07:00",
+      "items": [
+        {
+          "hour": "07:00",
+          "room": "EA 322",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr hab. Wiesław Kordalski",
+          "notes": "od 18.04.2024 co 2 tygodnie",
+          "start_date": "2024.04.18",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "08:00",
+      "items": [
+        {
+          "hour": "08:00",
+          "room": "EA 322",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr hab. Wiesław Kordalski",
+          "notes": "od 18.04.2024 co 2 tygodnie",
+          "start_date": "2024.04.18",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "09:00",
+      "items": [
+        {
+          "hour": "09:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr hab. Wiesław Kordalski",
+          "notes": "do 11.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.11"
+        },
+        {
+          "hour": "09:00",
+          "room": "EA 322",
+          "subject_type": "[L]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr hab. Wiesław Kordalski",
+          "notes": "od 18.04.2024 co 2 tygodnie",
+          "start_date": "2024.04.18",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "10:00",
+      "items": [
+        {
+          "hour": "10:00",
+          "room": "NE AUD1L",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr hab. Wiesław Kordalski",
+          "notes": "do 11.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.11"
+        }
+      ]
+    },
+    {
+      "hour": "11:00",
+      "items": [
+        {
+          "hour": "11:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr hab. Marek Moszyński",
+          "notes": "do 11.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.11"
+        }
+      ]
+    },
+    {
+      "hour": "12:00",
+      "items": [
+        {
+          "hour": "12:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Programowanie obiektowe",
+          "teacher": "dr hab. Marek Moszyński",
+          "notes": "do 11.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.11"
+        }
+      ]
+    },
+    {
+      "hour": "13:00",
+      "items": []
+    },
+    {
+      "hour": "14:00",
+      "items": []
+    },
+    {
+      "hour": "15:00",
+      "items": [
+        {
+          "hour": "15:00",
+          "room": "SWFIS I2",
+          "subject_type": "[C]",
+          "subject_name": "Wychowanie fizyczne I",
+          "teacher": "mgr Kazimierz Rozwadowski",
+          "notes": "15:30-17:00",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "16:00",
+      "items": [
+        {
+          "hour": "16:00",
+          "room": "SWFIS I2",
+          "subject_type": "[C]",
+          "subject_name": "Wychowanie fizyczne I",
+          "teacher": "mgr Kazimierz Rozwadowski",
+          "notes": "15:30-17:00",
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "17:00",
+      "items": []
+    },
+    {
+      "hour": "18:00",
+      "items": []
+    },
+    {
+      "hour": "19:00",
+      "items": []
+    },
+    {
+      "hour": "20:00",
+      "items": []
+    },
+    {
+      "hour": "21:00",
+      "items": []
+    }
+  ],
+  "friday": [
+    {
+      "hour": "07:00",
+      "items": []
+    },
+    {
+      "hour": "08:00",
+      "items": []
+    },
+    {
+      "hour": "09:00",
+      "items": [
+        {
+          "hour": "09:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Tymoteusz Skrzyński",
+          "notes": "od 19.04.2024",
+          "start_date": "2024.04.19",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "10:00",
+      "items": [
+        {
+          "hour": "10:00",
+          "room": "EA 534",
+          "subject_type": "[L]",
+          "subject_name": "Układy cyfrowe",
+          "teacher": "mgr inż. Tymoteusz Skrzyński",
+          "notes": "od 19.04.2024",
+          "start_date": "2024.04.19",
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "11:00",
+      "items": []
+    },
+    {
+      "hour": "12:00",
+      "items": [
+        {
+          "hour": "12:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Matematyka dyskretna",
+          "teacher": "dr Paweł Obszarski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "13:00",
+      "items": [
+        {
+          "hour": "13:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Matematyka dyskretna",
+          "teacher": "dr Paweł Obszarski",
+          "notes": null,
+          "start_date": null,
+          "end_date": null
+        }
+      ]
+    },
+    {
+      "hour": "14:00",
+      "items": [
+        {
+          "hour": "14:00",
+          "room": "NE 159",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Andrzej Jastrzębski",
+          "notes": "od 19.04.2024; termin wspólny gr.8",
+          "start_date": "2024.04.19",
+          "end_date": null
+        },
+        {
+          "hour": "14:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Stanisław Galla",
+          "notes": "do 12.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.12"
+        }
+      ]
+    },
+    {
+      "hour": "15:00",
+      "items": [
+        {
+          "hour": "15:00",
+          "room": "NE 159",
+          "subject_type": "[P]",
+          "subject_name": "Algorytmy i struktury danych",
+          "teacher": "mgr inż. Andrzej Jastrzębski",
+          "notes": "od 19.04.2024; termin wspólny gr.8",
+          "start_date": "2024.04.19",
+          "end_date": null
+        },
+        {
+          "hour": "15:00",
+          "room": "NE AUD1P",
+          "subject_type": "[W]",
+          "subject_name": "Podstawy elektroniki i metrologii",
+          "teacher": "dr inż. Stanisław Galla",
+          "notes": "do 12.04.2024",
+          "start_date": null,
+          "end_date": "2024.04.12"
+        }
+      ]
+    },
+    {
+      "hour": "16:00",
+      "items": []
+    },
+    {
+      "hour": "17:00",
+      "items": []
+    },
+    {
+      "hour": "18:00",
+      "items": []
+    },
+    {
+      "hour": "19:00",
+      "items": []
+    },
+    {
+      "hour": "20:00",
+      "items": []
+    },
+    {
+      "hour": "21:00",
+      "items": []
+    }
+  ]
+}
