@@ -4,6 +4,7 @@ import { timetableData, emptyBlock, classType } from "types/classes";
 import {
   defaultSettings,
   groupOpts,
+  root,
   subjectMappings,
   subjectMappingsDrut,
 } from "globals/consts";
@@ -34,18 +35,6 @@ function getWeek(date: Date) {
     )
   );
 }
-let rootFolder = "";
-switch (document.location.hostname) {
-  case "nightfallht.github.io":
-    rootFolder = "/timetableV2/";
-    break;
-  case "localhost":
-  case "127.0.0.1":
-    rootFolder = "/";
-    break;
-  default:
-}
-const root = location.protocol + "//" + location.host + rootFolder;
 
 const timetableDiv = document.getElementById("timetable");
 
