@@ -24,15 +24,15 @@ function getWeek(date) {
             ((week1.getDay() + 6) % 7)) /
             7));
 }
-let rootFolder;
+let rootFolder = "";
 switch (document.location.hostname) {
-    case "asite.com":
-        rootFolder = "/";
-        break;
-    case "localhost":
+    case "nightfallht.github.io":
         rootFolder = "/timetableV2/";
         break;
-    default: // set whatever you want
+    case "localhost":
+        rootFolder = "/";
+        break;
+    default:
 }
 const timetableDiv = document.getElementById("timetable");
 const data = await fetch(rootFolder + "timetable.json").then((res) => res.json());

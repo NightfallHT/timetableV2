@@ -34,15 +34,15 @@ function getWeek(date: Date) {
     )
   );
 }
-let rootFolder;
+let rootFolder = "";
 switch (document.location.hostname) {
-  case "asite.com":
-    rootFolder = "/";
-    break;
-  case "localhost":
+  case "nightfallht.github.io":
     rootFolder = "/timetableV2/";
     break;
-  default: // set whatever you want
+  case "localhost":
+    rootFolder = "/";
+    break;
+  default:
 }
 
 const timetableDiv = document.getElementById("timetable");
