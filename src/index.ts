@@ -34,16 +34,27 @@ function getWeek(date: Date) {
     )
   );
 }
+let rootFolder;
+switch (document.location.hostname) {
+  case "asite.com":
+    rootFolder = "/";
+    break;
+  case "localhost":
+    rootFolder = "/timetableV2/";
+    break;
+  default: // set whatever you want
+}
+
 const timetableDiv = document.getElementById("timetable");
 
-const data: timetableData = await fetch("/timetable.json").then((res) =>
-  res.json()
+const data: timetableData = await fetch(rootFolder + "/timetable.json").then(
+  (res) => res.json()
 );
-const dayTemplate = await fetch("/templates/day.html").then((res) =>
-  res.text()
+const dayTemplate = await fetch(rootFolder + "/templates/day.html").then(
+  (res) => res.text()
 );
-const classTemplate = await fetch("/templates/class.html").then((res) =>
-  res.text()
+const classTemplate = await fetch(rootFolder + "/templates/class.html").then(
+  (res) => res.text()
 );
 let settings: Settings =
   document.cookie === "" ? defaultSettings : JSON.parse(document.cookie);
