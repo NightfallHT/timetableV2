@@ -40,21 +40,23 @@ switch (document.location.hostname) {
     rootFolder = "/timetableV2/";
     break;
   case "localhost":
+  case "127.0.0.1":
     rootFolder = "/";
     break;
   default:
 }
+const root = location.protocol + "//" + location.host + rootFolder;
 
 const timetableDiv = document.getElementById("timetable");
 
-const data: timetableData = await fetch(rootFolder + "timetable.json").then(
-  (res) => res.json()
+const data: timetableData = await fetch(root + "timetable.json").then((res) =>
+  res.json()
 );
-const dayTemplate = await fetch(rootFolder + "templates/day.html").then((res) =>
+const dayTemplate = await fetch(root + "templates/day.html").then((res) =>
   res.text()
 );
-const classTemplate = await fetch(rootFolder + "templates/class.html").then(
-  (res) => res.text()
+const classTemplate = await fetch(root + "templates/class.html").then((res) =>
+  res.text()
 );
 let settings: Settings =
   document.cookie === "" ? defaultSettings : JSON.parse(document.cookie);
