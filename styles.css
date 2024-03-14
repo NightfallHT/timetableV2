@@ -3,18 +3,31 @@
 * {
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+}
+
+*,
+*::before,
+*::after{box-sizing:border-box;}
 
 .slider {
   /* width: 300px; */
   text-align: center;
   /* overflow: hidden; */
 }
-#timetable::-webkit-scrollbar {
+#timetable::-webkit-scrollbar, 
+.day::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-#timetable {
+#timetable,
+.day{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -92,10 +105,6 @@ body {
   padding: 0 1em;
   gap: 2em;
   justify-content: space-between;
-}
-.data-container *{
-/* display: inline-block; */
-  /* word-wrap: ; */
 }
 .time{
   display: block;
