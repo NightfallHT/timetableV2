@@ -35,9 +35,9 @@ switch (document.location.hostname) {
     default: // set whatever you want
 }
 const timetableDiv = document.getElementById("timetable");
-const data = await fetch(rootFolder + "/timetable.json").then((res) => res.json());
-const dayTemplate = await fetch(rootFolder + "/templates/day.html").then((res) => res.text());
-const classTemplate = await fetch(rootFolder + "/templates/class.html").then((res) => res.text());
+const data = await fetch(rootFolder + "timetable.json").then((res) => res.json());
+const dayTemplate = await fetch(rootFolder + "templates/day.html").then((res) => res.text());
+const classTemplate = await fetch(rootFolder + "templates/class.html").then((res) => res.text());
 let settings = document.cookie === "" ? defaultSettings : JSON.parse(document.cookie);
 document.cookie = JSON.stringify(settings);
 // day from 0 to 6, as per Date implementation

@@ -47,13 +47,13 @@ switch (document.location.hostname) {
 
 const timetableDiv = document.getElementById("timetable");
 
-const data: timetableData = await fetch(rootFolder + "/timetable.json").then(
+const data: timetableData = await fetch(rootFolder + "timetable.json").then(
   (res) => res.json()
 );
-const dayTemplate = await fetch(rootFolder + "/templates/day.html").then(
-  (res) => res.text()
+const dayTemplate = await fetch(rootFolder + "templates/day.html").then((res) =>
+  res.text()
 );
-const classTemplate = await fetch(rootFolder + "/templates/class.html").then(
+const classTemplate = await fetch(rootFolder + "templates/class.html").then(
   (res) => res.text()
 );
 let settings: Settings =
