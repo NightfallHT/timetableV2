@@ -1,3 +1,15 @@
+let rootFolder = "";
+switch (document.location.hostname) {
+    case "nightfallht.github.io":
+        rootFolder = "/timetableV2/";
+        break;
+    case "localhost":
+    case "127.0.0.1":
+        rootFolder = "/";
+        break;
+    default:
+}
+export const root = location.protocol + "//" + location.host + rootFolder;
 export const groupOpts = {
     aids_proj: [
         "poniedziałek rano",

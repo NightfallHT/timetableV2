@@ -1,9 +1,26 @@
 import { Settings } from "types/settings";
-import { getNextWeekday, getWeekNumber, replaceTemplate } from "./util";
-import { timetableData, emptyBlock, weekday } from "types/classes";
+import { getWeekNumber, replaceTemplate } from "./util";
+import { timetableData, emptyBlock } from "types/classes";
 import { defaultSettings, root, subjectMappingsDrut } from "globals/consts";
 
+function getNextWeekday(day: weekday): Date {
+  let today = new Date();
+  while (today.getDay() !== day) {
+    today.setDate(today.getDate() + 1);
+  }
+  return today;
+}
+enum weekday {
+  sunday = 0,
+  monday = 1,
+  tuesday = 2,
+  wednesday = 3,
+  thursday = 4,
+  friday = 5,
+  saturday = 6,
+}
 const timetableDiv = document.getElementById("timetable");
+if (timetableDiv === null) throw new Error("timetableDiv is null");
 
 const data: timetableData = await fetch(root + "timetable.json").then((res) =>
   res.json()
@@ -41,6 +58,14 @@ function getKeyByValue(map: Map<string, string>, searchValue: any) {
     if (value === searchValue) return key;
   }
 }
+function scrollCarousel(direction: number): void {
+  console.log("scrolling...");
+  const carousel = document.getElementById("timetable") as HTMLDivElement;
+  carousel.scrollBy({
+    left: (carousel.scrollWidth / carousel.childElementCount) * direction,
+    behavior: "smooth",
+  });
+}
 
 let key: keyof typeof defaultSettings.groups;
 for (key in defaultSettings.groups) {
@@ -48,95 +73,111 @@ for (key in defaultSettings.groups) {
     localStorage.setItem(key, defaultSettings.groups[key]);
   }
 }
-if (timetableDiv !== null) {
-  let day: keyof timetableData;
-  for (day in data) {
-    timetableDiv.innerHTML += dayTemplate.replace(/{%day%}/g, day);
+let day: keyof timetableData;
+for (day in data) {
+  timetableDiv.innerHTML += dayTemplate.replace(/{%day%}/g, day);
 
-    const scheduleDiv = document.getElementById(day)!;
-    let output = [];
+  const scheduleDiv = document.getElementById(day)!;
+  let output = [];
 
-    for (const classes of data[day]) {
-      let anyClassesHappening = false;
-      const empty: emptyBlock = {
-        hour: classes.hour,
-        room: "",
-        subject_type: "",
-        subject_name: "",
-        teacher: "",
-        notes: "",
-        start_date: null,
-        end_date: null,
-      };
-      for (const classBlock of classes.items) {
-        // Ensure date exists; if not specified, classes last the entire semester.
-        // Dates chosen within reasonable boundaries.
+  for (const classes of data[day]) {
+    let anyClassesHappening = false;
+    const empty: emptyBlock = {
+      hour: classes.hour,
+      room: "",
+      subject_type: "",
+      subject_name: "",
+      teacher: "",
+      notes: "",
+      start_date: null,
+      end_date: null,
+    };
+    for (const classBlock of classes.items) {
+      // Ensure date exists; if not specified, classes last the entire semester.
+      // Dates chosen within reasonable boundaries.
 
-        if (classBlock.end_date !== null) {
-          classBlock.end_date = new Date(classBlock.end_date);
-        } else {
-          classBlock.end_date = new Date("01.01.2038");
-        }
-        if (classBlock.start_date !== null) {
-          classBlock.start_date = new Date(classBlock.start_date);
-        } else {
-          classBlock.start_date = new Date("01.01.1970");
-        }
-        let today = new Date();
-        // Check if classes start within bounds
-        if (
-          (classBlock.start_date > today || classBlock.end_date < today) &&
-          localStorage.getItem("display-all") !== "true"
-        )
-          continue;
-
-        let key = getKeyByValue(
-          subjectMappingsDrut,
-          classBlock.subject_type + classBlock.subject_name
-        );
-        switch (key) {
-          case "aids_proj":
-            if (!matchesAidsProj(day, classes.hour)) continue;
-            break;
-          case "uc_proj":
-            if (!matchesUCProj(day, classes.hour)) continue;
-            break;
-          case "uc_lab":
-            if (!matchesUCLab(day)) continue;
-            break;
-          case "so_lab":
-            if (!matchesSO(day)) continue;
-            break;
-          case "oop_lab":
-            if (!matchesOOP(day)) continue;
-            break;
-          case "peim_lab":
-            if (!isPeimThisWeek(classes.hour)) continue;
-            break;
-          case "aids_lab":
-            if (!isAisdThisWeek()) continue;
-            break;
-
-          default:
-            break;
-        }
-        output.push(classBlock);
-        anyClassesHappening = true;
+      if (classBlock.end_date !== null) {
+        classBlock.end_date = new Date(classBlock.end_date);
+      } else {
+        classBlock.end_date = new Date("01.01.2038");
       }
-      if (!anyClassesHappening) {
-        output.push(empty);
+      if (classBlock.start_date !== null) {
+        classBlock.start_date = new Date(classBlock.start_date);
+      } else {
+        classBlock.start_date = new Date("01.01.1970");
       }
-    }
-    while (output[0].room === "") output.shift();
-    while (output[output.length - 1].room === "") output.pop();
-    for (const classes of output) {
-      scheduleDiv.innerHTML += replaceTemplate(
-        classes.hour,
-        classTemplate,
-        classes
+      let today = new Date();
+      // Check if classes start within bounds
+      if (
+        (classBlock.start_date > today || classBlock.end_date < today) &&
+        localStorage.getItem("display-all") !== "true"
+      )
+        continue;
+
+      let key = getKeyByValue(
+        subjectMappingsDrut,
+        classBlock.subject_type + classBlock.subject_name
       );
+      switch (key) {
+        case "aids_proj":
+          if (!matchesAidsProj(day, classes.hour)) continue;
+          break;
+        case "uc_proj":
+          if (!matchesUCProj(day, classes.hour)) continue;
+          break;
+        case "uc_lab":
+          if (!matchesUCLab(day)) continue;
+          break;
+        case "so_lab":
+          if (!matchesSO(day)) continue;
+          break;
+        case "oop_lab":
+          if (!matchesOOP(day)) continue;
+          break;
+        case "peim_lab":
+          if (!isPeimThisWeek(classes.hour)) continue;
+          break;
+        case "aids_lab":
+          if (!isAisdThisWeek()) continue;
+          break;
+
+        default:
+          break;
+      }
+      output.push(classBlock);
+      anyClassesHappening = true;
+    }
+    if (!anyClassesHappening) {
+      output.push(empty);
     }
   }
+  while (output[0].room === "") output.shift();
+  while (output[output.length - 1].room === "") output.pop();
+  for (const classes of output) {
+    scheduleDiv.innerHTML += replaceTemplate(
+      classes.hour,
+      classTemplate,
+      classes
+    );
+  }
+}
+
+const prevScrolls = document.getElementsByClassName(
+  "carousel-prev"
+) as HTMLCollectionOf<HTMLButtonElement>;
+const nextScrolls = document.getElementsByClassName(
+  "carousel-next"
+) as HTMLCollectionOf<HTMLButtonElement>;
+
+for (const button of prevScrolls) {
+  button.addEventListener("click", () => {
+    scrollCarousel(-1);
+  });
+}
+for (const button of nextScrolls) {
+  button.addEventListener("click", () => {
+    scrollCarousel(1);
+  });
 }
 export {};
 

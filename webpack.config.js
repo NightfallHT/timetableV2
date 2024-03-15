@@ -22,7 +22,7 @@ export default {
   },
   resolve: {
     plugins: [new TsConfigpathsPlugin()],
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".d.ts", ".js"],
   },
   output: {
     filename: "[name].js",

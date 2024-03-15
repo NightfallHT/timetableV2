@@ -1,5 +1,5 @@
 import { Settings } from "types/settings";
-import { classType, timetableData, weekday } from "types/classes";
+import { classType, timetableData } from "types/classes";
 
 export function getWeekNumber(date: Date): number {
   // TODO: figure out why there is var and how the names are resolved
@@ -19,13 +19,6 @@ export function getWeekNumber(date: Date): number {
         7
     )
   );
-}
-export function getNextWeekday(day: weekday): Date {
-  let today = new Date();
-  while (today.getDay() !== day) {
-    today.setDate(today.getDate() + 1);
-  }
-  return today;
 }
 export function replaceTemplate(
   time: string,
