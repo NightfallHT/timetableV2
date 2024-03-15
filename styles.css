@@ -30,6 +30,11 @@ html, body {
 .day{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  display: inline-block;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
 #timetable {
   display: flex;
@@ -115,4 +120,32 @@ body {
 }
 #title{
   text-justify:inter-word;
+}
+.day-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.day-name {
+  align-self: center;
+  justify-self: center;
+}
+.carousel-prev {
+  margin-left:calc(50% - 7rem);
+}
+.carousel-next{
+  margin-right:calc(50% - 7rem);
+}
+.carousel-prev, .carousel-next {
+  border:none;
+    background-color: white;
+    /* color: white; */
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    /* margin: 0 5px; */
+    cursor: pointer;
+    border-radius: 3px;
 }
